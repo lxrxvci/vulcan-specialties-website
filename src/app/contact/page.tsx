@@ -9,9 +9,9 @@ import {
   MapPin,
   Clock,
   Send,
-  Instagram,
   ExternalLink,
 } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 
 const serviceOptions = [
   "Additions or Remodels",
@@ -267,7 +267,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#2D2D2D]/70 hover:text-[#B3530D] transition-colors"
                 >
-                  <Instagram size={18} className="text-[#B3530D]" />
+                  <InstagramIcon size={18} className="text-[#B3530D]" />
                   <span>Follow us @vulcan_specialties</span>
                   <ExternalLink size={12} />
                 </a>

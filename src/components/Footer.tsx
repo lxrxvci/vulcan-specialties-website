@@ -1,12 +1,6 @@
 import Link from "next/link";
-import {
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  Shield,
-  ExternalLink,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Shield, ExternalLink } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 
 export default function Footer() {
   return (
@@ -99,7 +93,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-[#2D2D2D]/70 text-sm hover:text-[#B3530D] transition-colors"
                 >
-                  <Instagram size={16} />
+                  <InstagramIcon size={16} />
                   @vulcan_specialties
                   <ExternalLink size={12} />
                 </a>

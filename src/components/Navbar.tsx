@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Instagram, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +71,7 @@ export default function Navbar() {
                 scrolled ? "text-[#2D2D2D]" : "text-white"
               }`}
             >
-              <Instagram size={20} />
+              <InstagramIcon size={20} />
             </a>
             <Link
               href="/contact"
@@ -118,7 +119,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#2D2D2D] text-sm py-2 hover:text-[#B3530D]"
             >
-              <Instagram size={18} /> Instagram
+              <InstagramIcon size={18} /> Instagram
             </a>
             <Link
               href="/contact"
