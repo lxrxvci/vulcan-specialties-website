@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Shield, Clock, Users } from "lucide-react";
 
 const slides = [
@@ -9,16 +10,22 @@ const slides = [
     id: 1,
     title: "Kitchen Remodels",
     subtitle: "Transform your kitchen into the heart of your home",
+    image: "/work/kitchen-finished.jpg",
+    imageAlt: "Remodeled kitchen with white cabinets and butcher block countertops",
   },
   {
     id: 2,
     title: "Home Additions",
     subtitle: "Expand your living space with custom additions",
+    image: "/work/sunroom-conversion.jpg",
+    imageAlt: "Bonus room being converted into finished living space",
   },
   {
     id: 3,
     title: "Dry Rot Repair",
     subtitle: "Protect your home from hidden damage",
+    image: "/work/floor-repair.jpg",
+    imageAlt: "Damaged flooring removed for dry rot repair",
   },
 ];
 
@@ -44,17 +51,16 @@ export default function HeroCarousel() {
             index === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Background gradient placeholder */}
-          <div
-            className={`absolute inset-0 ${
-              index === 0
-                ? "bg-gradient-to-br from-[#3D2B1F] via-[#5C3D2E] to-[#2D2D2D]"
-                : index === 1
-                ? "bg-gradient-to-br from-[#2D2D2D] via-[#4A3728] to-[#3D2B1F]"
-                : "bg-gradient-to-br from-[#4A3728] via-[#2D2D2D] to-[#5C3D2E]"
-            }`}
+          {/* Background photo */}
+          <Image
+            src={slide.image}
+            alt={slide.imageAlt}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
       ))}
 

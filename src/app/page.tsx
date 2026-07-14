@@ -2,6 +2,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import AboutSection from "@/components/AboutSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import TestimonialSection from "@/components/TestimonialSection";
+import RecentWork from "@/components/RecentWork";
 import CTASection from "@/components/CTASection";
 import ServiceAreas from "@/components/ServiceAreas";
 import Navbar from "@/components/Navbar";
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutSection />
         <ServicesGrid />
         <TestimonialSection />
+        <RecentWork />
         <CTASection />
         <ServiceAreas />
       </main>
